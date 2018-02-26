@@ -1,0 +1,43 @@
+<div class="container">
+
+  <section class="col-md-10 col-md-offset-1">
+    <div class="row" style="text-align: center;">
+      <h1>{{room}}</h1>
+      <h2>Active trades</h2>
+    </div>
+    <div style="border: 2px solid black">
+      <table>
+        <th>Type of order</th>
+        <th>Amount</th>
+        <th>Price</th>
+
+        <tr ng-repeat="entry in entries track by $index">
+          <td>{{entry.type}}</td>
+          <td>{{entry.amount}}</td>
+          <td>{{entry.price}}</td>
+        </tr>
+      </table>
+    </div>
+
+    <!--
+  	<form ng-submit="done()">
+  		<input class="form-control" type="text" ng-model="mess" id="loginInputField" required autofocus>
+  	</form>
+    -->
+    <form class="form-inline">
+      <div class="form-group">
+        <label for="nrOfStocks">Number of stocks:</label>
+        <!--ng-model används i controllers.js för logiken-->
+        <input type="nrOfStocks" class="form-control" type="text" ng-model="amount" id="amountInputField" required autofocus>
+      </div>
+      <div class="form-group">
+        <label for="price">Asked price:</label>
+        <input type="price" class="form-control" type="text" ng-model="price" id="priceInputField" required autofocus>
+      </div>
+      <div>
+        <button type="button" ng-click="buy()" class="btn btn-primary">Buy</button>
+        <button type="button" ng-click="sell()" class="btn btn-primary">Sell</button>
+      </div>
+    </form>
+  </section>
+</div>

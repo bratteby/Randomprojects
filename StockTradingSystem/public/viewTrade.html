@@ -1,0 +1,20 @@
+<div class="container">
+
+  <section class="col-md-10 col-md-offset-1">
+    <div class="row" style="text-align: center;">
+      <h1>{{room}}</h1>
+      <h2>Closed trades</h2>
+    </div>
+    <div style="border: 2px solid black">
+      <table>
+        <th>Amount</th>
+        <th>Price</th>
+
+        <tr ng-repeat="entry in tradeEntries track by $index">
+          <td>{{entry.amount}}</td>
+          <td>{{entry.price}}</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+</div>

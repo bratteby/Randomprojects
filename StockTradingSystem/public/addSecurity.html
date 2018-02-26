@@ -1,0 +1,10 @@
+<div class="container">
+	<form class="form-inline" ng-submit="done()">
+		<div class="form-group">
+			<label for="securityName">Add a security:</label>
+			<!--ng-model används i controllers.js för logiken-->
+			<input type="securityName" class="form-control" type="text" ng-model="security_name" id="securityInputField" required autofocus>
+			<button type="submit" class="btn btn-primary">Add</button>
+		</div>
+	</form>
+</div>
